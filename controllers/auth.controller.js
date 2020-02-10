@@ -9,10 +9,10 @@ exports.signUpView = (req,res,next) => {
 }
 
 exports.signUpPost = async (req,res,next) => {
-  const { name, email, password, genre, age } = req.body
-  if(email === '' || password === ''){
+  const { name, email, password, genre, age, country } = req.body
+  if(email === '' || password === '' || genre === '' || age === '' || country === ''){
     res.render('auth/signup', { 
-      message: 'Se requiere usuario y contraseña'
+      message: 'Se requiere llenar todos los campos.'
     })
   }
   const userOnDB = await User.findOne({email})
@@ -21,7 +21,7 @@ exports.signUpPost = async (req,res,next) => {
       message: 'Este correo ya está registrado'
     })
   }
-  await User.register({name, email, genre, age }, password)
+  await User.register({name, email, genre, age, country }, password)
   res.redirect('/login')
 }
 

@@ -10,6 +10,7 @@ const userSchema = new Schema(
       enum: ['Hombre', 'Mujer', 'Prefiero no decirlo'],
       type: String
     },
+    country: String,
     age: Number,
     photo: {
       type: String,

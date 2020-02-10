@@ -19,7 +19,7 @@ router.post('/signup', signUpPost)
 router.get('/login', loginView)
 router.post('/login', 
   passport.authenticate('local',{
-    successRedirect: '/filter',
+    successRedirect: '/profile',
     failureRedirect: '/login',
     failureFlash: true
   })
