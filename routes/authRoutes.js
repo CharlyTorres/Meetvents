@@ -3,6 +3,7 @@ const router = Router()
 const passport = require('../config/passport')
 const { isAuth } = require('../middlewares/index')
 const { isLogged } = require('../middlewares/index')
+const { isAdmin } = require('../middlewares/index')
 
 const {
   loginView,
@@ -10,6 +11,8 @@ const {
   signUpPost,
   profileView,
   profilePost,
+  createEvents,
+  createEventsPost,
   savedView,
   savedPost,
   logout
@@ -29,6 +32,9 @@ router.post('/login',
 
 router.get('/profile', isAuth, profileView)
 router.post('/profile', profilePost)
+
+router.get('/create', isAdmin, createEvents)
+router.post('/create', createEventsPost)
 
 router.get('/saved', savedView)
 router.post('/saved', savedPost)

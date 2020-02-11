@@ -1,4 +1,5 @@
 const User = require('../models/User')
+const Event = require('../models/Event')
 
 exports.loginView = (req,res,next) => {
   res.render('auth/login', {message: req.flash('error')})
@@ -32,6 +33,21 @@ exports.profileView = async (req,res,next) => {
 
 exports.profilePost = async (req,res,next) => {
 
+}
+
+exports.createEvents = async (req,res,next) => {
+  res.render('auth/create')
+}
+
+exports.createEventsPost = async (req,res,next) => {
+  const { genre, name, date, capacity, price, description } = req.body
+  if(genre === '' || name === '' || date === '' || capacity === '' || price === '' || description){
+    res.render('auth/create', { 
+      message: 'Se requiere llenar todos los campos.'
+    })
+  }
+  await Event.create({genre, name, date, capacity, price, photo, description })
+  res.redirect('/create')
 }
 
 exports.savedView = async (req,res,next) => {

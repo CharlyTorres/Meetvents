@@ -15,9 +15,9 @@ exports.isLogged = (req, res, next) => {
 }
 
 exports.isAdmin = (req, res, next) => {
-  if (req.isAuthenticated() && req.user.role === "ADMIN") {
+  if (req.isAuthenticated() && req.user.role === "Admin") {
     next();
   } else {
-    res.redirect("/auth/login");
+    res.redirect("/profile");
   }
 };

@@ -21,6 +21,11 @@ const eventsSchema = new Schema(
     },
     date: Date,
     capacity: Number,
+    photo: {
+      type: String,
+      default:
+        "https://www.dondeir.com/wp-content/uploads/2019/12/los-festivales-de-musica-mas-esperados-de-2020-en-mexico-edc.jpg"
+    },
     attendees: [
       {
         type: Schema.Types.ObjectId,
@@ -35,7 +40,6 @@ const eventsSchema = new Schema(
         ref: "Review"
       }
     ],
-    cartel: String,
     availableTickets: Number
   },
   {
@@ -43,6 +47,4 @@ const eventsSchema = new Schema(
   }
 );
 
-concertSchema.index({ location: "2dsphere" });
-
-module.exports = model("Events", eventsSchema);
+module.exports = model("Event", eventsSchema);
