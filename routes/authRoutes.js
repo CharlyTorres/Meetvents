@@ -1,6 +1,8 @@
 const { Router } = require('express')
 const router = Router()
 const passport = require('../config/passport')
+const { isAuth } = require('../middlewares/index')
+const { isLogged } = require('../middlewares/index')
 
 const {
   loginView,
@@ -13,10 +15,10 @@ const {
   logout
 } = require('../controllers/auth.controller')
 
-router.get('/signup', signUpView)
+router.get('/signup', isLogged, signUpView)
 router.post('/signup', signUpPost)
 
-router.get('/login', loginView)
+router.get('/login', isLogged, loginView)
 router.post('/login', 
   passport.authenticate('local',{
     successRedirect: '/profile',
@@ -25,7 +27,7 @@ router.post('/login',
   })
 )
 
-router.get('/profile', profileView)
+router.get('/profile', isAuth, profileView)
 router.post('/profile', profilePost)
 
 router.get('/saved', savedView)

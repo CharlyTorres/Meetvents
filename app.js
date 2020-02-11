@@ -70,7 +70,6 @@ const index = require('./routes/index');
 app.use('/', index);
 const auth = require('./routes/authRoutes')
 app.use('/', auth)
-app.use('/profile', isAuth)
 
 
 module.exports = app;

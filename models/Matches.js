@@ -20,4 +20,4 @@ const matchSchema = new Schema(
 );
 
 
-module.exports = model("Matches", orderSchema);
+module.exports = model("Matches", matchSchema);
