@@ -6,11 +6,11 @@ const eventsSchema = new Schema(
       type: String,
       enum: [
         "CULTURAL",
-        "CONCIERTO",
-        "DEPORTIVO",
-        "FESTIVALES",
-        "COMIDA/BEBIDA",
-        "CONFERENCIAS",
+        "CONCERT",
+        "SPORTS",
+        "FESTIVALS",
+        "FOOD/DRINK",
+        "CONFERENCE",
         "STAND-UP",
       ]
     },

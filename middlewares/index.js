@@ -8,7 +8,7 @@ exports.isAuth = (req, res, next) => {
 
 exports.isLogged = (req, res, next) => {
   if (req.isAuthenticated()) {
-    res.redirect("/profile")
+    res.redirect("/events")
   } else {
     next()
   }

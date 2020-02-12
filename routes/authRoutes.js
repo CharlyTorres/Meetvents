@@ -15,6 +15,14 @@ const {
   createEventsPost,
   savedView,
   savedPost,
+  eventsView,
+  culturalView,
+  concertView,
+  sportsView,
+  festivalsView,
+  foodView,
+  conferenceView,
+  standView,
   logout
 } = require('../controllers/auth.controller')
 
@@ -24,7 +32,7 @@ router.post('/signup', signUpPost)
 router.get('/login', isLogged, loginView)
 router.post('/login', 
   passport.authenticate('local',{
-    successRedirect: '/profile',
+    successRedirect: '/events',
     failureRedirect: '/login',
     failureFlash: true
   })
@@ -38,6 +46,16 @@ router.post('/create', createEventsPost)
 
 router.get('/saved', savedView)
 router.post('/saved', savedPost)
+
+
+router.get('/events', eventsView)
+router.get('/cultural', culturalView)
+router.get('/concert', concertView)
+router.get('/sports', sportsView)
+router.get('/festivals', festivalsView)
+router.get('/food', foodView)
+router.get('/conference', conferenceView)
+router.get('/stand', standView)
 
 router.get('/logout', logout)
 
