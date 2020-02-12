@@ -1,0 +1,66 @@
+@mixin flexCenter($background) {
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: $direction;
+  background-image: $background;
+  font-size: 1rem;
+}
+
+.signup{
+  @include flexCenter(linear-gradient(#50409A, #964EC2));
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: $textColor;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 8%;
+  padding-right: 7.5%;
+  padding-left: 7.5%;
+  h1{
+    font-weight: bold;
+    margin-top: 0px;
+    text-align: center;
+  }
+  button{
+    background-color: $primaryBtn;
+    border-radius: 5px;
+    border: transparent;
+    color: white;
+    width: 200px;
+    height:35px;
+    margin: auto;
+    font-weight: bold;
+    // &:hover{
+    //   background: blue; 
+    // } 
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  input{
+    height: 40px;
+    border-radius: 5px;
+    border: transparent;
+  }
+  select{
+    color:#444444;
+    border: white;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+    .btn{
+      color:white;
+    }
+  }
+  a{
+    color: white;
+    font-weight: bold;
+  }
+  .center{
+    margin: auto;
+  }
+} 
