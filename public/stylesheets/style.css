@@ -76,6 +76,20 @@
   margin: auto;
 }
 
+.signup .alert-danger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
 .login {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,10 +105,10 @@
           flex-direction: column;
   width: 100vw;
   height: 100vh;
-  padding-top: 8%;
+  padding-top: 6%;
   padding-right: 7.5%;
   padding-left: 7.5%;
-  padding-bottom: 10%;
+  padding-bottom: 15%;
   color: white;
 }
 
@@ -157,5 +171,83 @@
 
 .login .center {
   margin: auto;
+}
+
+.events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.events nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f2f2f2;
+  width: 100vw;
+  height: 12%;
+}
+
+.events nav h5 {
+  margin: auto;
+  padding-bottom: 2%;
+}
+
+.events div {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border: transparent;
+  font-weight: bold;
+  background: -webkit-gradient(linear, left top, left bottom, from(#964EC2), to(#50409A));
+  background: linear-gradient(#964EC2, #50409A);
+  border-radius: 5px;
+}
+
+.events div img {
+  width: auto;
+  height: 130px;
+  background-size: 90%;
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  border-radius: 5px;
+  margin-left: -35px;
+}
+
+.events div a {
+  vertical-align: middle;
+  color: white;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  padding-top: 65px;
+  z-index: 99;
+}
+
+.tinted-image {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.45)), to(rgba(255, 0, 0, 0.45))), url(image.jpg);
+  background-image: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 0, 0, 0.45)), url(image.jpg);
 }
 /*# sourceMappingURL=style.css.map */

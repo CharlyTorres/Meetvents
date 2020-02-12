@@ -38,6 +38,7 @@ router.post('/login',
   })
 )
 
+// router.get('/profile', profileView)
 router.get('/profile', isAuth, profileView)
 router.post('/profile', profilePost)
 
