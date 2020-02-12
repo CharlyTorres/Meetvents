@@ -14,7 +14,7 @@
   color: white;
   width: 100vw;
   height: 100vh;
-  padding-top: 8%;
+  padding-top: 5%;
   padding-right: 7.5%;
   padding-left: 7.5%;
 }
@@ -47,6 +47,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  padding-top: -5%;
 }
 
 .signup input {
@@ -90,7 +91,7 @@
   margin: auto;
 }
 
-.login {
+body .login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,15 +106,16 @@
           flex-direction: column;
   width: 100vw;
   height: 100vh;
-  padding-top: 6%;
+  padding-top: 3%;
   padding-right: 7.5%;
   padding-left: 7.5%;
   padding-bottom: 15%;
   color: white;
+  border: 0;
 }
 
-.login img {
-  width: 100%;
+body .login img {
+  width: 40vw;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,12 +123,19 @@
   margin: auto;
 }
 
-.login h1 {
-  font-weight: bold;
-  text-align: center;
+@media (max-width: 959px) {
+  body .login img {
+    width: 80vw;
+  }
 }
 
-.login button {
+body .login h1 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: -40px;
+}
+
+body .login button {
   background-color: #FF7BBF;
   border-radius: 5px;
   border: transparent;
@@ -137,7 +146,7 @@
   font-weight: bold;
 }
 
-.login form {
+body .login form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,15 +157,16 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-top: -60px;
 }
 
-.login input {
+body .login input {
   height: 40px;
   border-radius: 5px;
   border: transparent;
 }
 
-.login select {
+body .login select {
   color: #444444;
   border: white;
   height: 40px;
@@ -164,13 +174,67 @@
   padding-left: 10px;
 }
 
-.login a {
+body .login a {
   color: white;
   font-weight: bold;
 }
 
-.login .center {
+body .login .center {
   margin: auto;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 11vh;
+}
+
+nav h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  padding-right: 15%;
+  padding-left: 12%;
+  margin: auto;
+}
+
+nav .searchlog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: flex;
+  padding-left: 7%;
+}
+
+nav .searchlog .form-control {
+  width: 68vw;
+  margin-top: 1%;
+}
+
+nav .searchlog a {
+  padding-left: 2%;
+  padding-top: 2%;
+  color: #444444;
+  margin-bottom: 2%;
 }
 
 .events {
@@ -181,27 +245,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-}
-
-.events nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #f2f2f2;
-  width: 100vw;
-  height: 12%;
-}
-
-.events nav h5 {
-  margin: auto;
-  padding-bottom: 2%;
+  padding-top: 10vh;
 }
 
 .events div {
@@ -213,8 +264,8 @@
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  width: 150px;
-  height: 150px;
+  width: 40%;
+  height: 20%;
   margin: auto;
   border: transparent;
   font-weight: bold;
@@ -225,30 +276,90 @@
 
 .events div img {
   width: auto;
-  height: 130px;
-  background-size: 90%;
+  height: 90%;
+  background-size: 100%;
   opacity: 0.4;
   background-repeat: no-repeat;
   background-position: 0 0;
-  position: absolute;
   border-radius: 5px;
-  margin-left: -35px;
+  margin: auto;
+}
+
+@media (max-width: 959px) {
+  .events div img {
+    height: 70%;
+  }
 }
 
 .events div a {
-  vertical-align: middle;
   color: white;
   text-align: center;
-  width: 150px;
-  height: 150px;
+  width: 30vw;
+  line-height: 20vh;
   border-radius: 5px;
-  padding-top: 65px;
   z-index: 99;
+  position: absolute;
+  font-size: 2vw;
 }
 
-.tinted-image {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.45)), to(rgba(255, 0, 0, 0.45))), url(image.jpg);
-  background-image: linear-gradient(rgba(255, 0, 0, 0.45), rgba(255, 0, 0, 0.45)), url(image.jpg);
+@media (max-width: 959px) {
+  .events div a {
+    font-size: 3vw;
+  }
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 11vh;
+}
+
+nav h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  padding-right: 15%;
+  padding-left: 12%;
+  margin: auto;
+}
+
+nav .searchlog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: flex;
+  padding-left: 5%;
+}
+
+nav .searchlog .form-control {
+  width: 68vw;
+  margin-top: 1%;
+}
+
+nav .searchlog a {
+  padding-left: 2%;
+  padding-top: 2%;
+  color: #444444;
+  margin-bottom: 2%;
 }
 
 .detail {

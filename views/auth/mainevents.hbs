@@ -1,4 +1,14 @@
-  <div class="detail">
+<nav class="navbar navbar-light fixed-top">
+    <form class="form-inline">
+  <h5>meetvents</h5>
+  <section class="searchlog">
+    <input class="form-control mr-sm-6" type="search" placeholder="  Discover" aria-label="Search">
+    <a href="/Logout">Logout</a>
+  </section>
+  </form>
+</nav>
+
+<div class="detail">
   {{#each events}}
   <div class="column is-4">
     <div class="card">
@@ -10,12 +20,14 @@
       <div class="card-content">
         <div class="media">
           <div class="media-content">
+            <p class="subtitle is-6"><time datetime="2016-1-1">{{this.date}}</time></span></p>
             <p class="title is-4">{{this.name}}</p>
+            <p class="title is-4">{{this.adress}}</p>
+            <p class="title is-4">{{this.place}}</p>
             <p class="subtitle is-6">{{this.description}}</p>
             <p class="subtitle is-6">${{this.price}}</p>
             <p class="subtitle is-6">available tickets: {{this.availableTickets}}</p>
             <p class="subtitle is-6"><span class="tag is-primary">{{this.genre}}</span></p>
-            <p class="subtitle is-6"><time datetime="2016-1-1">{{this.date}}</time></span></p>
           </div>
         </div>
         <footer class="card-footer">

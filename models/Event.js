@@ -15,6 +15,8 @@ const eventsSchema = new Schema(
       ]
     },
     name: String,
+    adress: String,
+    place: String,
     location: {
       type: { type: String },
       coordinates: [Number]

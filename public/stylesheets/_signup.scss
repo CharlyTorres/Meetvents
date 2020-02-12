@@ -15,7 +15,7 @@
   color: $textColor;
   width: 100vw;
   height: 100vh;
-  padding-top: 8%;
+  padding-top: 5%;
   padding-right: 7.5%;
   padding-left: 7.5%;
   h1{
@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-top: -5%;
   }
   input{
     height: 40px;

@@ -85,7 +85,7 @@ exports.createEvents = async (req,res,next) => {
 
 
 exports.createEventsPost = async (req,res,next) => {
-  const { genre, name, date, capacity, price, description, photo, longitude, latitude } = req.body
+  const { genre, name, date, capacity, price, description, photo, longitude, latitude, adress, place} = req.body
   if(genre === '' || name === '' || date === '' || capacity === '' || price === '' || description){
     res.render('auth/create', { 
       message: 'Se requiere llenar todos los campos.'
@@ -95,8 +95,8 @@ exports.createEventsPost = async (req,res,next) => {
     type: "Point",
     coordinates: [longitude, latitude]
  };
-  await Event.create({genre, name, date, capacity, price, photo, description, location })
-  res.redirect('/events')
+  const events = await Event.create({genre, name, date, capacity, price, photo, description, location, adress, place})
+  res.render('/events', events)
 }
 
 
