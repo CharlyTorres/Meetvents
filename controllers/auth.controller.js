@@ -34,6 +34,7 @@ exports.addEventMatch = async (req, res, next) => {
   res.redirect('/events')
 }
 
+
 exports.usersMatchAssistantsView = async (req, res, next) => {
   const { eventId } = req.params
   const userMatch = await User.find( {"events": eventId })
@@ -131,6 +132,12 @@ exports.createEventsPost = async (req,res,next) => {
   res.render('/events', events)
 }
 
+exports.deleteEvent = async (req,res,next) => {
+  const { eventDelete } = req.params
+  const deleteEvento = await Event.find( {"_id": eventDelete })
+  await Event.findByIdAndDelete(deleteEvento)
+  res.redirect("/events")
+}
 
 exports.savedView = async (req,res,next) => {
   res.render('auth/saved')

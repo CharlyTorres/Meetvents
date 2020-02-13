@@ -25,6 +25,7 @@ const {
   standView,
   addEventMatch,
   addFriend,
+  deleteEvent,
   usersView,
   usersMatchAssistantsView,
   logout
@@ -55,6 +56,7 @@ router.post('/saved', savedPost)
 router.get('/users', usersView)
 router.post('/users/:addfriends', addFriend)
 
+router.get('/delete/:eventDelete', deleteEvent)
 
 router.get('/events', eventsView)
 router.post('/addevents/:addEvent', addEventMatch)
