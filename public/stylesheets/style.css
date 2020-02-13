@@ -209,7 +209,7 @@ nav h5 {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: transparent;
-  padding-right: 15%;
+  padding-right: 20%;
   padding-left: 12%;
   margin: auto;
 }
@@ -363,7 +363,25 @@ nav .searchlog a {
 }
 
 .detail {
-  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
   height: 100vh;
+  padding-top: 10vh;
+}
+
+.detail img {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
