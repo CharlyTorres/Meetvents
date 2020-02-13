@@ -129,7 +129,6 @@ exports.createEventsPost = async (req,res,next) => {
     type: "Point",
     coordinates: [longitude, latitude]
  };
- console.log('adress',address)
   const events = await Event.create({genre, name, date, capacity, price, photo, description, location, address, place})
   res.render('/events', events)
 }

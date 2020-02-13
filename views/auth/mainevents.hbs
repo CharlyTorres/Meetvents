@@ -3,7 +3,7 @@
   <h5>meetvents</h5>
   <section class="searchlog">
     <input class="form-control mr-sm-6" type="search" placeholder="  Discover" aria-label="Search">
-    <a href="/Logout">Logout</a>
+    <a href="/events">Back</a>
   </section>
   </form>
 </nav>
@@ -12,41 +12,41 @@
 <div class="detail">
 {{#each events}}
 <div class="card-columns">
+    <img src="{{this.photo}}" class="card-img-top">
 
   <div class="maininfo">
-    <img src="{{this.photo}}" class="card-img-top">
-    <div class="card-body"><br>
+    <div class="card-body">
     <p class="card-text">{{this.date}}</p>
     <h3 class="card-title">{{this.name}}</h3>
     <p class="subtitle is-6"><span class="tag is-primary">{{this.genre}}</span></p>
     <p class="card-text">{{this.place}}</p>
+     <span>
+          <form action="/addevents/{{this.id}}" method="POST">
+            <input type="submit" value="I WANT TO GO" name="addevent">
+            {{!-- <a href="/assistants/{{this.id}}" class="href">SEARCH PEOPLE</a> --}}
+          </form> 
+        </span>
   </div>
   </div>
 
 <div class="botones">
     <div class="card-body">
-        <span>
-          <form action="/addevents/{{this.id}}" method="POST">
-            <input type="submit" value="I WANT TO GO" name="addevent">
-            <a href="/assistants/{{this.id}}" class="href">SEARCH PEOPLE</a>
-          </form> 
-        </span>
+      <a href="#" class="href">INVITE FRIENDS</a>
+      <a href="/assistants/{{this.id}}" class="href">SEARCH PEOPLE</a>
     </div>
 </div>
-<br>
 
       <div class="eventinfo">
-          <h5>Event information</h5>
+          <h4>Event information</h4><br>
           <p>{{this.description}}</p>
           <h6>Costo del evento</h6>
           <p class="subtitle is-6">${{this.price}}</p>
       </div>
-      <br>
 
 
       <div class="address">
-          <h5>Address</h5>
-          <p>{{this.address}}</p>
+          <h4>Address</h4>
+          <p>{{this.address}}</p><br>
           <div id="map" style="width:295px; height:270px;"></div>
       </div>
 
