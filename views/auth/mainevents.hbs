@@ -8,42 +8,51 @@
   </form>
 </nav>
 
+
+<div class="detail">
 {{#each events}}
-<div class="card" style="width: 18rem;">
-  <img src="{{this.photo}}" class="card-img-top">
-  <div class="card-body">
+<div class="card-columns">
+
+  <div class="maininfo">
+    <img src="{{this.photo}}" class="card-img-top">
+    <div class="card-body"><br>
     <p class="card-text">{{this.date}}</p>
-    <h5 class="card-title">{{this.name}}</h5>
+    <h3 class="card-title">{{this.name}}</h3>
+    <p class="subtitle is-6"><span class="tag is-primary">{{this.genre}}</span></p>
     <p class="card-text">{{this.place}}</p>
   </div>
-   <div class="card-body">
-    <a href="#" class="card-link">SEARCH PEOPLE</a>
-    <a href="#" class="card-link">INVITE FRIENDS</a>
   </div>
-  <ul class="list-group list-group-flush">
-    <h6>Event information</h6>
-    <p>{{this.description}}</p>
-   <li class="list-group-item">
-    <h6>Adress</h6>
-    <p>{{this.adress}}</p>
-  </ul>
-       <p class="subtitle is-6">${{this.price}}</p>
-            <p class="subtitle is-6">available tickets: {{this.availableTickets}}</p>
-            <p class="subtitle is-6"><span class="tag is-primary">{{this.genre}}</span></p>
-            <p class="subtitle is-6"><time datetime="2016-1-1">{{this.date}}</time></span></p>
-          </div>
-        </div>
-        <footer class="card-footer">
-          <p class="card-footer-item">
-            <span>
-              <form action="/addevents/{{this.id}}" method="POST">
-                <input type="submit" value="Assist" name="addevent">
-              </form>
-              <a href="/assistants/{{this.id}}" class="href">Assistants</a>
-            </span>
-          </p>
-        </footer>
-  <div id="map" style="width:285px; height:200px;"></div>
+
+<div class="botones">
+    <div class="card-body">
+        <span>
+          <form action="/addevents/{{this.id}}" method="POST">
+            <input type="submit" value="I WANT TO GO" name="addevent">
+            <a href="/assistants/{{this.id}}" class="href">SEARCH PEOPLE</a>
+          </form> 
+        </span>
+    </div>
+</div>
+<br>
+
+      <div class="eventinfo">
+          <h5>Event information</h5>
+          <p>{{this.description}}</p>
+          <h6>Costo del evento</h6>
+          <p class="subtitle is-6">${{this.price}}</p>
+      </div>
+      <br>
+
+
+      <div class="address">
+          <h5>Address</h5>
+          <p>{{this.address}}</p>
+          <div id="map" style="width:295px; height:270px;"></div>
+      </div>
+
+</div>
+</div>
+
   <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zc2R6IiwiYSI6ImNrMGR4cWk2djBhbWszY3F2b3N4bDBqZTUifQ.ByHk_m_uZOjYaruW6T8Wig';
     var map = new mapboxgl.Map({
@@ -72,6 +81,7 @@
   </script>
 </div>
   {{/each}}
+  </div>
  
 
 

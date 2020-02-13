@@ -1,10 +1,6 @@
 @mixin flexCenter($background) {
   display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: $direction;
   background-image: $background;
-  // justify-content: space-evenly;
   font-size: 1rem;
 }
 
