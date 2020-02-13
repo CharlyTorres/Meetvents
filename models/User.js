@@ -1,5 +1,6 @@
 const { model, Schema } = require("mongoose");
 const PLM = require('passport-local-mongoose')
+const friends = require("mongoose-friends")
 
 const userSchema = new Schema(
   {
@@ -17,10 +18,8 @@ const userSchema = new Schema(
       default:
         "https://theimag.org/wp-content/uploads/2015/01/user-icon-png-person-user-profile-icon-20.png"
     },
-    friends: {
-      type: Schema.Types.ObjectId,
-      ref: "User"
-    },
+    friends: [String],
+    events: [String],
 
     eventMatches: {
       type: Schema.Types.ObjectId,

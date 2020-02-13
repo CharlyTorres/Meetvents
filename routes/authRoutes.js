@@ -23,6 +23,10 @@ const {
   foodView,
   conferenceView,
   standView,
+  addEventMatch,
+  addFriend,
+  usersView,
+  usersMatchAssistantsView,
   logout
 } = require('../controllers/auth.controller')
 
@@ -48,8 +52,14 @@ router.post('/create', createEventsPost)
 router.get('/saved', savedView)
 router.post('/saved', savedPost)
 
+router.get('/users', usersView)
+router.post('/users/:addfriends', addFriend)
+
 
 router.get('/events', eventsView)
+router.post('/addevents/:addEvent', addEventMatch)
+router.get('/assistants/:eventId', usersMatchAssistantsView)
+
 router.get('/cultural', culturalView)
 router.get('/concert', concertView)
 router.get('/sports', sportsView)
