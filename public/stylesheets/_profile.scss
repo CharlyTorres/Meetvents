@@ -1,0 +1,212 @@
+.profile{
+  padding:5%;
+  background-color: #f7f7f7;
+  .profile-info{
+    img{
+      width:100%;
+      margin: auto;
+    }
+    h2{
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding-bottom: 2%;
+    }
+    .verified{
+      width: 70%;
+      text-align: center;
+      background-color: #313866;
+      text-align: center;
+      margin: auto;
+      border-radius: 5px;
+      color: white;
+      padding: 2% 0 0 0;
+    }
+  }
+  .friends-info{
+    width: 90vw;
+    h3{
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding-bottom: 2%;
+    }
+    .badge-info{
+      color:white;
+    }
+    .badge-pill{
+      padding-right: .8em;
+      padding-left: .9em;
+      background-color: #964ec2;
+    }
+    .badge{
+      display: inline-block;
+      font-size: 65%;
+      font-weight: 400;
+      line-height: .8;
+    }
+    .card{
+      padding:0;
+      height: 17vh;
+      background-color: #313866;
+      border: transparent;
+      img{
+        height: 81%;
+      }
+      .card-body{
+        padding:0;
+        color:white;
+        h6{
+          width: 100%;
+          text-align: center;
+          margin: auto;
+          padding-bottom: 8%;
+        }
+      }
+    }
+  }
+  .match-events{
+    width: 90vw;
+    h3{
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding: 4% 0;
+    }
+    .badge-info{
+      background-color: #964ec2;
+      color:white;
+    }
+    .badge-pill{
+      padding-right: .8em;
+      padding-left: .9em;
+    }
+    .badge{
+      display: inline-block;
+      font-size: 65%;
+      font-weight: 400;
+      line-height: .8;
+    }
+    .card{
+      padding:0;
+      height: 23vh;
+      background-color: #313866;
+      border: transparent;
+      img{
+        height: 81%;
+      }
+      .card-body{
+        padding:0;
+        color:white;
+        h6{
+          text-align: center;
+          padding-top:5%;
+        }
+      }
+    }
+  }
+
+  .waiting-list{
+    width: 90vw;
+    h3{
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding: 4% 0;
+    }
+    .badge-info{
+      background-color: #964ec2;
+      color:white;
+    }
+    .badge-pill{
+      padding-right: .8em;
+      padding-left: .9em;
+    }
+    .badge{
+      display: inline-block;
+      font-size: 65%;
+      font-weight: 400;
+      line-height: .8;
+    }
+    .card{
+      padding:0;
+      height: 23vh;
+      background-color: #313866;
+      border: transparent;
+      img{
+        height: 81%;
+      }
+      .card-body{
+        padding:0;
+        color:white;
+        h6{
+          text-align: center;
+          padding-top:5%;
+        }
+      }
+    }
+  }
+  .past-events{
+    width: 90vw;
+    h3{
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding: 4% 0;
+    }
+    .badge-info{
+      background-color: #964ec2;
+      color:white;
+    }
+    .badge-pill{
+      padding-right: .8em;
+      padding-left: .9em;
+    }
+    .badge{
+      display: inline-block;
+      font-size: 65%;
+      font-weight: 400;
+      line-height: .8;
+    }
+    .card{
+      padding:0;
+      height: 23vh;
+      background-color: #313866;
+      border: transparent;
+      img{
+        height: 81%;
+      }
+      .card-body{
+        padding:0;
+        color:white;
+        h6{
+          text-align: center;
+          padding-top:5%;
+        }
+      }
+    }
+  }
+
+  .logout{
+    background-color: $primaryBtn;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    padding: 2% 0;
+    border-radius: 5px;
+    border:transparent;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    font-weight: bold;
+    a{
+      color:white;
+    }
+  }
+
+  .footer{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 2% 0;
+  }
+}
