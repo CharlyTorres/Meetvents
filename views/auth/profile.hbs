@@ -1,26 +1,113 @@
-<div class="columns is-desktop">
-  <div class="is-6-desktop is-12-mobile">
-    <div class="card">
-      <div class="card-image">
-        <figure class="image is-12">
-          <img style="width: 12rem;" src="{{user.photo}}" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
+<section class="profile">
+  <div class="profile-info">
+    {{!-- <img style="width: 12rem;" src="{{user.photo}}" alt="Placeholder image"> --}}
+    <img style="width: 23.1rem;" src="/images/profile.jpg" alt="Placeholder image">
+      <h2 class="subtitle is-6">{{user.name}}</h2>
+      <div class="verified"><p class="title is-4">{{user.age}} | {{user.country}} | Verified Account   <i class="fas fa-check"></i></p></div>
+  </div>
 
-          <div class="media-content">
-            <p class="title is-4">{{user.name}}</p>
-            <p class="subtitle is-6">{{user.email}}</p>
-            <p class="subtitle is-6">Age: {{user.age}}</p>
-            <p class="subtitle is-6">Country: {{user.country}}</p>
+<div class="friends-info">
+  <h3>Friends <span class="badge badge-pill badge-info">3</span></h3>
+    <div class="card-group flex-row">
+      <div class="row" style="display: flex; justify-content:space-evenly;">
+        <div class="card col-3 m-1">
+          <img class="card-img-top" src="/images/amigo1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="is-6-desktop is-12-mobile">
-   Algo más
-  </div>
+        <div class="card col-3 m-1">
+          <img class="card-img-top" src="/images/amigo2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+          </div>
+        </div>
+        <div class="card col-3 m-1">
+          <img class="card-img-top" src="/images/amigo4.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+          </div>
+        </div>
 
+      </div>
 </div>
+     
+</div>
+
+<div class="match-events">
+  <h3>Matched events <span class="badge badge-pill badge-info">3</span></h3>
+    <div class="card-group flex-row">
+      <div class="row" style="display: flex; justify-content:space-evenly;">
+        <div class="card col-5 m-1">
+          <img class="card-img-top" src="/images/amigo1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">event</h6>
+          </div>
+        </div>
+        <div class="card col-5 m-1">
+          <img class="card-img-top" src="/images/amigo2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">event</h6>
+          </div>
+        </div>
+    
+      </div>
+  </div>    
+</div>
+
+<div class="waiting-list">
+  <h3>Waiting list <span class="badge badge-pill badge-info">3</span></h3>
+    <div class="card-group flex-row">
+      <div class="row" style="display: flex; justify-content:space-evenly;">
+        <div class="card col-5 m-1">
+          <img class="card-img-top" src="/images/amigo1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">event</h6>
+          </div>
+        </div>
+        <div class="card col-5 m-1">
+          <img class="card-img-top" src="/images/amigo2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">event</h6>
+          </div>
+        </div>
+    
+      </div>
+  </div>    
+</div>
+
+<div class="past-events">
+  <h3>Past events <span class="badge badge-pill badge-info">3</span></h3>
+    <div class="card-group flex-row">
+      <div class="row" style="display: flex; justify-content:space-evenly;">
+        <div class="card col-5 m-1">
+          <img class="card-img-top" src="/images/amigo1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">event</h6>
+          </div>
+        </div>
+        <div class="card col-5 m-1">
+          <img class="card-img-top" src="/images/amigo2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-title">event</h6>
+          </div>
+        </div>
+    
+      </div>
+  </div>    
+</div>
+<br><br>
+
+
+<div class="logout"><a href="/Logout">LOGOUT</a></div>
+
+<br><br>
+
+
+  <div class="footer">
+              © 2020-
+    <noscript>2018</noscript>
+    <script type="text/javascript">document.write(new Date().getFullYear());</script>
+    meetvents, All rights reserved.
+  </div>
+</section>
