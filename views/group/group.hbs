@@ -1,0 +1,18 @@
+{{#each formMessage}}
+
+
+
+{{/each}}
+<form action="/newMessage" method="POST">
+  <label for="subject">subject:</label>
+  <input type="text" name="subject"><br>
+  <label for="message" class="for">Message:</label>
+  <textarea name="message" style="width:250px;height:150px;"></textarea>
+
+    <p class="control">
+      <button class="button is-success">
+        Post
+      </button>
+    </p>
+  </div>
+</form>
