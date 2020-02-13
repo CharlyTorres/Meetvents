@@ -5,11 +5,13 @@ const { isLogged } = require('../middlewares/index')
 const { isAdmin } = require('../middlewares/index')
 
 const {
-  groupView
+  groupView,
+  groupPost,
 } = require('../controllers/groupController')
 
 
-router.get('/group', groupView)
+router.get('/group/:eventsId', groupView)
+router.post('/group', groupPost)
 
 
 

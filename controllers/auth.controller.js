@@ -36,9 +36,7 @@ exports.addEventMatch = async (req, res, next) => {
 
 exports.usersMatchAssistantsView = async (req, res, next) => {
   const { eventId } = req.params
-
   const userMatch = await User.find( {"events": eventId })
-  console.log(userMatch)
 
   res.render('auth/assistants', { userMatch })
 }

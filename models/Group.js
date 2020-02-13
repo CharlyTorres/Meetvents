@@ -3,8 +3,10 @@ const { model, Schema } = require("mongoose");
 const groupSchema = new Schema(
   {
     name: String,
+    subject: String,
     event: [String],
     users: [String],
+    userid: [{ type: Schema.Types.ObjectId, ref: 'User' }],
     messages: String,
     description: String,
     photo: {
