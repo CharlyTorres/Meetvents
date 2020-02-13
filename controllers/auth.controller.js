@@ -129,7 +129,7 @@ exports.createEventsPost = async (req,res,next) => {
     type: "Point",
     coordinates: [longitude, latitude]
  };
-  await Event.create({genre, name, date, capacity, price, photo, description, location, userslike })
+  await Event.create({ genre, name, date, capacity, price, photo, description, location, userslike })
   res.redirect('/events')
 }
 
