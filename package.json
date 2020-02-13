@@ -16,6 +16,7 @@
     "express-session": "^1.17.0",
     "hbs": "^4.0.1",
     "mongoose": "^5.2.10",
+    "mongoose-friends": "^0.2.5",
     "morgan": "^1.9.0",
     "node-sass-middleware": "^0.11.0",
     "passport": "^0.4.1",

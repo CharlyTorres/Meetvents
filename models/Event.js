@@ -15,6 +15,8 @@ const eventsSchema = new Schema(
       ]
     },
     name: String,
+    address: String,
+    place: String,
     location: {
       type: { type: String },
       coordinates: [Number]
@@ -26,6 +28,7 @@ const eventsSchema = new Schema(
       default:
         "https://www.dondeir.com/wp-content/uploads/2019/12/los-festivales-de-musica-mas-esperados-de-2020-en-mexico-edc.jpg"
     },
+    userslike: [String],
     attendees: [
       {
         type: Schema.Types.ObjectId,

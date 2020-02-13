@@ -27,6 +27,22 @@
     <h6>Adress</h6>
     <p>{{this.adress}}</p>
   </ul>
+       <p class="subtitle is-6">${{this.price}}</p>
+            <p class="subtitle is-6">available tickets: {{this.availableTickets}}</p>
+            <p class="subtitle is-6"><span class="tag is-primary">{{this.genre}}</span></p>
+            <p class="subtitle is-6"><time datetime="2016-1-1">{{this.date}}</time></span></p>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <span>
+              <form action="/addevents/{{this.id}}" method="POST">
+                <input type="submit" value="Assist" name="addevent">
+              </form>
+              <a href="/assistants/{{this.id}}" class="href">Assistants</a>
+            </span>
+          </p>
+        </footer>
   <div id="map" style="width:285px; height:200px;"></div>
   <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zc2R6IiwiYSI6ImNrMGR4cWk2djBhbWszY3F2b3N4bDBqZTUifQ.ByHk_m_uZOjYaruW6T8Wig';

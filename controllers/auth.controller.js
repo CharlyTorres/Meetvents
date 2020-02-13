@@ -9,8 +9,42 @@ exports.signUpView = (req,res,next) => {
   res.render('auth/signup')
 }
 
+exports.addFriend = async (req, res, next) => {
+
+  const user = req.user
+  const {addfriends} = req.params
+  await User.findByIdAndUpdate( user,{ $push: { "friends": addfriends } })
+  await User.findByIdAndUpdate( addfriends, { $push: { "friends": user._id }})
+
+  res.redirect('/users')
+
+}
+
+exports.usersView = async (req, res, next) => {
+  const users = await User.find()
+  res.render('auth/users', {users} )
+}
+
+exports.addEventMatch = async (req, res, next) => {
+  const user = req.user
+  const { addEvent } = req.params
+  await User.findByIdAndUpdate(user, { $push: { "events": addEvent }})
+  await Event.findByIdAndUpdate(addEvent, { $push: { "userslike": user._id }})
+
+  res.redirect('/events')
+}
+
+exports.usersMatchAssistantsView = async (req, res, next) => {
+  const { eventId } = req.params
+
+  const userMatch = await User.find( {"events": eventId })
+  console.log(userMatch)
+
+  res.render('auth/assistants', { userMatch })
+}
+
 exports.signUpPost = async (req,res,next) => {
-  const { name, email, password, genre, age, country } = req.body
+  const { name, email, password, genre, age, country, friends, events } = req.body
   if(email === '' || password === '' || genre === '' || age === '' || country === ''){
     res.render('auth/signup', { 
       message: 'Se requiere llenar todos los campos.'
@@ -22,7 +56,7 @@ exports.signUpPost = async (req,res,next) => {
       message: 'Este correo ya está registrado'
     })
   }
-  await User.register( {name, email, genre, age, country }, password)
+  await User.register( {name, email, genre, age, country, friends, events }, password)
   res.redirect('/login')
 }
 
