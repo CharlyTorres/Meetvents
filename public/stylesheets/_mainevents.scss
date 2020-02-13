@@ -46,6 +46,7 @@ nav{
   padding-top: 13vh;
   padding-right: 5%;
   padding-left: 5%;
+  border-radius: 20px;
   h4{
     text-align: center;
   }
@@ -65,6 +66,7 @@ nav{
       border-radius: 5px;
       height: 50px;
       width:40vw;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     }
   }
   .botones{
@@ -75,21 +77,23 @@ nav{
     padding-top: 10%;
     border: transparent;
     border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     a{
       font-weight: bold;
       color: $primaryBtn;
-      display: flex;
+      display: block;
       width: 45vw;
       height: 50px;
       margin-bottom: 10%;
-      background-color: white;
+      background-color: #f7f7f7;
       border-radius: 5px;
       border: $primaryBtn;
-      padding-left: 12%;
-      padding-top: 3%;
+      padding: 2% 6%;
       line-height: 200%;
       border: transparent;
       margin-left:8vw;
+      border: #FF7BBF solid 2px;
+      text-align: center;
     }
   }
   .eventinfo{
@@ -106,6 +110,11 @@ nav{
     #map{
       margin: auto;
     }
+  }
+  .footer{
+    margin:auto;
+    padding-bottom: 3%;
+    padding-top:3%
   }
 }
 
