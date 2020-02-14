@@ -96,6 +96,7 @@ nav{
       text-align: center;
     }
   }
+
   .eventinfo{
     background-color: #f7f7f7;
     padding: 5%;
@@ -112,9 +113,10 @@ nav{
     }
   }
   .footer{
-    margin:auto;
-    padding-bottom: 3%;
-    padding-top:3%
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 2% 0;
   }
 }
 
