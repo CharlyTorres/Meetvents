@@ -14,7 +14,7 @@ const flash        = require('connect-flash')
 
 
 mongoose
-  .connect('mongodb://localhost/meetvents', {useNewUrlParser: true, useUnifiedTopology: true})
+  .connect('mongodb+srv://cruush:123@cluster0-tokdj.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
