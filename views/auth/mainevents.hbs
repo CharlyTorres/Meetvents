@@ -26,8 +26,9 @@
             {{!-- <a href="/assistants/{{this.id}}" class="href">SEARCH PEOPLE</a> --}}
           </form> 
         </span>
+
   </div>
-  </div>
+  </div> <br>
 
 <div class="botones">
     <div class="card-body">
@@ -35,8 +36,6 @@
       <a href="/assistants/{{this.id}}" class="href">SEARCH PEOPLE</a>
       <a href="/delete/{{this.id}}" class="href">DELETE EVENT</a>
     </div>
-    <div class="card-body">
-</div>
 </div>
 
       <div class="eventinfo">
@@ -54,15 +53,15 @@
       </div>
 
   
+</div>
+</div>
+
  <div class="footer">
               © 2020-
     <noscript>2018</noscript>
     <script type="text/javascript">document.write(new Date().getFullYear());</script>
     meetvents, All rights reserved.
   </div>
-</div>
-</div>
-
 
   <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zc2R6IiwiYSI6ImNrMGR4cWk2djBhbWszY3F2b3N4bDBqZTUifQ.ByHk_m_uZOjYaruW6T8Wig';
@@ -72,6 +71,7 @@
       center: [{{this.location.coordinates.[0]}}, {{this.location.coordinates.[1]}}],
       zoom: 15
     });
+    
     map.addControl(
       new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,

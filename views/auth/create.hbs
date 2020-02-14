@@ -1,4 +1,5 @@
-<form action="/create" method="POST">
+<form class="create" action="/create" method="POST">
+<h2>Create new event</h2><br>
   <label for="date">Date</label>
   <input type="date" name="date"><br>
   <label for="name">Name</label>
@@ -17,26 +18,35 @@
   </select><br>
   <label for="capacity">Capacity</label>
   <input type="text" name="capacity"><br>
-  <label for="photo">Photo URL:</label>
+  <label for="photo">URL Photo</label>
   <input type="text" name="photo"><br>
   <label for="price">Price</label>
   <input type="text" name="price"><br>
-  <label for="description">Event Information:</label>
-  <textarea name="description" style="width:250px;height:150px;"></textarea><br>
+  <label for="description">Event Information</label>
+  <textarea name="description" style="width:100%;height:150px;"></textarea><br>
   <label for="address">Address</label>
   <input type="text" name="address"><br>
-<div id='map' style='width: 400px; height: 300px;'></div>
+<div id='map' style='width:100%; height: 300px;'></div>
   <input type="text" name="longitude" id="longitude" style="display: none;">
-  <input type="text" name="latitude" id="latitude" style="display: none;">
+  <input type="text" name="latitude" id="latitude" style="display: none;"><br><br>
 
   <div class="field">
     <p class="control">
-      <button class="button is-success">
+      <button class="button1 is-success">
         Create Event
       </button>
     </p>
   </div>
+  <br>
 </form>
+
+<div class="footer">
+              © 2020-
+    <noscript>2018</noscript>
+    <script type="text/javascript">document.write(new Date().getFullYear());</script>
+    meetvents, All rights reserved.
+  </div>
+
 
         {{#if message}}
         <div class="alert alert-danger" role="alert">

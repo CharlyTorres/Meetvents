@@ -34,7 +34,6 @@ nav{
 
 
 
-
 .detail{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width:100%;
@@ -65,38 +64,43 @@ nav{
       border: transparent;
       border-radius: 5px;
       height: 50px;
-      width:40vw;
+      width:100%;
       box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
     }
   }
   .botones{
     display: flex;
     flex-direction: column;
-    padding-left: 12%;
     background-image:linear-gradient(#964EC2,#50409A);
-    padding-top: 10%;
     border: transparent;
     border-radius: 5px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    .card-body{
+      width:60%;
+      height:200px;
+      margin:auto;
+      display: flex;
+      align-content: space-between;
+      flex-direction: column;
+      padding-top: 3%;
+    }
     a{
       font-weight: bold;
       color: $primaryBtn;
       display: block;
       width: 45vw;
       height: 50px;
-      margin-bottom: 10%;
       background-color: #f7f7f7;
       border-radius: 5px;
       border: $primaryBtn;
       padding: 2% 6%;
       line-height: 200%;
       border: transparent;
-      margin-left:8vw;
       border: #FF7BBF solid 2px;
       text-align: center;
+      margin:0 50px;
     }
   }
-
   .eventinfo{
     background-color: #f7f7f7;
     padding: 5%;
@@ -114,9 +118,34 @@ nav{
   }
   .footer{
     width: 100%;
-    text-align: center;
-    margin: auto;
-    padding: 2% 0;
+  }
+}
+@media(min-width:300px){
+  .detail{
+    width:100%;
+    div{
+      width: 100%;
+      input{
+        margin:0;
+      }
+    }
+  }
+  .botones{
+    padding:0 0 0 0;
+    margin:0;
+    .card-body{
+      padding: 0 0 0 0;
+      margin:0;
+      // display: flex;
+      // justify-content: space-around;
+      // align-content: space-between;
+      width: 100%;
+      // flex-direction: column;
+      a{
+        margin: 5px 0;
+        width: 100%;
+    }
+    }
   }
 }
 
