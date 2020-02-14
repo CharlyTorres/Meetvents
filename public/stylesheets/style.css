@@ -481,252 +481,167 @@ nav .searchlog .form-control {
 
 .profile {
   padding: 5%;
-  background-color: #f7f7f7;
-}
+  background-color: #f7f7f7; }
+  .profile .profile-info img {
+    width: 100%;
+    margin: auto; }
+  .profile .profile-info h2 {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 2%; }
+  .profile .profile-info .verified {
+    width: 70%;
+    text-align: center;
+    background-color: #313866;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    color: white;
+    padding: 2% 0 0 0; }
+  .profile .friends-info {
+    width: 90vw; }
+    .profile .friends-info h3 {
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding-bottom: 2%; }
+    .profile .friends-info .badge-info {
+      color: white; }
+    .profile .friends-info .badge-pill {
+      padding-right: .8em;
+      padding-left: .9em;
+      background-color: #964ec2; }
+    .profile .friends-info .badge {
+      display: inline-block;
+      font-size: 65%;
+      font-weight: 400;
+      line-height: .8; }
+    .profile .friends-info .card {
+      padding: 0;
+      height: 17vh;
+      background-color: #313866;
+      border: transparent; }
+      .profile .friends-info .card img {
+        height: 81%; }
+      .profile .friends-info .card .card-body {
+        padding: 0;
+        color: white; }
+        .profile .friends-info .card .card-body h6 {
+          width: 100%;
+          text-align: center;
+          margin: auto;
+          padding-bottom: 8%; }
+  .profile .match-events {
+    width: 90vw; }
+    .profile .match-events h3 {
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding: 4% 0; }
+    .profile .match-events .badge-info {
+      background-color: #964ec2;
+      color: white; }
+    .profile .match-events .badge-pill {
+      padding-right: .8em;
+      padding-left: .9em; }
+    .profile .match-events .badge {
+      display: inline-block;
+      font-size: 65%;
+      font-weight: 400;
+      line-height: .8; }
+    .profile .match-events .card {
+      padding: 0;
+      height: 23vh;
+      background-color: #313866;
+      border: transparent; }
+      .profile .match-events .card img {
+        height: 81%; }
+      .profile .match-events .card .card-body {
+        padding: 0;
+        color: white; }
+        .profile .match-events .card .card-body h6 {
+          text-align: center;
+          padding-top: 5%; }
+  .profile .waiting-list {
+    width: 90vw; }
+    .profile .waiting-list h3 {
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding: 4% 0; }
+    .profile .waiting-list .badge-info {
+      background-color: #964ec2;
+      color: white; }
+    .profile .waiting-list .badge-pill {
+      padding-right: .8em;
+      padding-left: .9em; }
+    .profile .waiting-list .badge {
+      display: inline-block;
+      font-size: 65%;
+      font-weight: 400;
+      line-height: .8; }
+    .profile .waiting-list .card {
+      padding: 0;
+      height: 23vh;
+      background-color: #313866;
+      border: transparent; }
+      .profile .waiting-list .card img {
+        height: 81%; }
+      .profile .waiting-list .card .card-body {
+        padding: 0;
+        color: white; }
+        .profile .waiting-list .card .card-body h6 {
+          text-align: center;
+          padding-top: 5%; }
+  .profile .past-events {
+    width: 90vw; }
+    .profile .past-events h3 {
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding: 4% 0; }
+    .profile .past-events .badge-info {
+      background-color: #964ec2;
+      color: white; }
+    .profile .past-events .badge-pill {
+      padding-right: .8em;
+      padding-left: .9em; }
+    .profile .past-events .badge {
+      display: inline-block;
+      font-size: 65%;
+      font-weight: 400;
+      line-height: .8; }
+    .profile .past-events .card {
+      padding: 0;
+      height: 23vh;
+      background-color: #313866;
+      border: transparent; }
+      .profile .past-events .card img {
+        height: 81%; }
+      .profile .past-events .card .card-body {
+        padding: 0;
+        color: white; }
+        .profile .past-events .card .card-body h6 {
+          text-align: center;
+          padding-top: 5%; }
+  .profile .logout {
+    background-color: #FF7BBF;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    padding: 2% 0;
+    border-radius: 5px;
+    border: transparent;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    font-weight: bold; }
+    .profile .logout a {
+      color: white; }
+  .profile .footer {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 2% 0; }
 
-.profile .profile-info img {
-  width: 100%;
-  margin: auto;
-}
-
-.profile .profile-info h2 {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  padding-bottom: 2%;
-}
-
-.profile .profile-info .verified {
-  width: 70%;
-  text-align: center;
-  background-color: #313866;
-  text-align: center;
-  margin: auto;
-  border-radius: 5px;
-  color: white;
-  padding: 2% 0 0 0;
-}
-
-.profile .friends-info {
-  width: 90vw;
-}
-
-.profile .friends-info h3 {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  padding-bottom: 2%;
-}
-
-.profile .friends-info .badge-info {
-  color: white;
-}
-
-.profile .friends-info .badge-pill {
-  padding-right: .8em;
-  padding-left: .9em;
-  background-color: #964ec2;
-}
-
-.profile .friends-info .badge {
-  display: inline-block;
-  font-size: 65%;
-  font-weight: 400;
-  line-height: .8;
-}
-
-.profile .friends-info .card {
-  padding: 0;
-  height: 17vh;
-  background-color: #313866;
-  border: transparent;
-}
-
-.profile .friends-info .card img {
-  height: 81%;
-}
-
-.profile .friends-info .card .card-body {
-  padding: 0;
-  color: white;
-}
-
-.profile .friends-info .card .card-body h6 {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  padding-bottom: 8%;
-}
-
-.profile .match-events {
-  width: 90vw;
-}
-
-.profile .match-events h3 {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  padding: 4% 0;
-}
-
-.profile .match-events .badge-info {
-  background-color: #964ec2;
-  color: white;
-}
-
-.profile .match-events .badge-pill {
-  padding-right: .8em;
-  padding-left: .9em;
-}
-
-.profile .match-events .badge {
-  display: inline-block;
-  font-size: 65%;
-  font-weight: 400;
-  line-height: .8;
-}
-
-.profile .match-events .card {
-  padding: 0;
-  height: 23vh;
-  background-color: #313866;
-  border: transparent;
-}
-
-.profile .match-events .card img {
-  height: 81%;
-}
-
-.profile .match-events .card .card-body {
-  padding: 0;
-  color: white;
-}
-
-.profile .match-events .card .card-body h6 {
-  text-align: center;
-  padding-top: 5%;
-}
-
-.profile .waiting-list {
-  width: 90vw;
-}
-
-.profile .waiting-list h3 {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  padding: 4% 0;
-}
-
-.profile .waiting-list .badge-info {
-  background-color: #964ec2;
-  color: white;
-}
-
-.profile .waiting-list .badge-pill {
-  padding-right: .8em;
-  padding-left: .9em;
-}
-
-.profile .waiting-list .badge {
-  display: inline-block;
-  font-size: 65%;
-  font-weight: 400;
-  line-height: .8;
-}
-
-.profile .waiting-list .card {
-  padding: 0;
-  height: 23vh;
-  background-color: #313866;
-  border: transparent;
-}
-
-.profile .waiting-list .card img {
-  height: 81%;
-}
-
-.profile .waiting-list .card .card-body {
-  padding: 0;
-  color: white;
-}
-
-.profile .waiting-list .card .card-body h6 {
-  text-align: center;
-  padding-top: 5%;
-}
-
-.profile .past-events {
-  width: 90vw;
-}
-
-.profile .past-events h3 {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  padding: 4% 0;
-}
-
-.profile .past-events .badge-info {
-  background-color: #964ec2;
-  color: white;
-}
-
-.profile .past-events .badge-pill {
-  padding-right: .8em;
-  padding-left: .9em;
-}
-
-.profile .past-events .badge {
-  display: inline-block;
-  font-size: 65%;
-  font-weight: 400;
-  line-height: .8;
-}
-
-.profile .past-events .card {
-  padding: 0;
-  height: 23vh;
-  background-color: #313866;
-  border: transparent;
-}
-
-.profile .past-events .card img {
-  height: 81%;
-}
-
-.profile .past-events .card .card-body {
-  padding: 0;
-  color: white;
-}
-
-.profile .past-events .card .card-body h6 {
-  text-align: center;
-  padding-top: 5%;
-}
-
-.profile .logout {
-  background-color: #FF7BBF;
-  width: 30%;
-  height: auto;
-  text-align: center;
-  margin: auto;
-  padding: 2% 0;
-  border-radius: 5px;
-  border: transparent;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-}
-
-.profile .logout a {
-  color: white;
-}
-
-.profile .footer {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  padding: 2% 0;
-}
 /*# sourceMappingURL=style.css.map */
