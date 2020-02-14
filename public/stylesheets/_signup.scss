@@ -1,8 +1,5 @@
 @mixin flexCenter($background) {
   display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: $direction;
   background-image: $background;
   font-size: 1rem;
 }
@@ -46,6 +43,7 @@
     height: 40px;
     border-radius: 5px;
     border: transparent;
+    padding-left:5%
   }
   select{
     color:#444444;

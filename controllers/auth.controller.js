@@ -16,7 +16,7 @@ exports.addFriend = async (req, res, next) => {
   await User.findByIdAndUpdate( user,{ $push: { "friends": addfriends } })
   await User.findByIdAndUpdate( addfriends, { $push: { "friends": user._id }})
 
-  res.redirect('/users')
+  res.redirect('/profile')
 
 }
 

@@ -1,17 +1,20 @@
-  <nav class="navbar navbar-light fixed-top">
+<nav class="navbar navbar-light fixed-top">
     <form class="form-inline">
+  
   <h5>meetvents</h5>
-  <section class="searchlog">
-    <input class="form-control mr-sm-6" type="search" placeholder="  Search friend" aria-label="Search">
-    <a href="/profile">Profile</a>
+  <section class="searchlog" style="margin:auto">
+    <a href="/events"><i class="fas fa-home"></i></a>
+    <a href="/profile" class="mr-3">Profile</a>
+    <input class="form-control mr-sm-6" type="search" placeholder="  Discover" aria-label="Search">
+    <a href="/Logout">Logout</a>
   </section>
   </form>
 </nav>
   
   <div class="detail">
-  {{#each userMatch}}
   <div class="row">
-    <div class="card col-sm-12 col-md-4 col-lg-3 mt-2 mb-2">
+  {{#each userMatch}}
+    <div class="card col-sm-12 col-md-4 col-lg-3 mt-2 mb-2 m-2 mr-auto">
       <div class="card-image">
         <figure class="image is-4by3 mt-2">
           <img src="{{this.photo}}" alt="Placeholder image">
@@ -37,6 +40,6 @@
         </footer>
       </div>
     </div>
-  </div>
   {{/each}}
+  </div>
   </div>

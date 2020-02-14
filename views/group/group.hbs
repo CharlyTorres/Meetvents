@@ -1,36 +1,27 @@
+<nav class="navbar navbar-light fixed-top">
+    <form class="form-inline">
+  
+  <h5>meetvents</h5>
+  <section class="searchlog" style="margin:auto">
+    <a href="/events"><i class="fas fa-home"></i></a>
+    <a href="/profile" class="mr-3">Profile</a>
+    <input class="form-control mr-sm-6" type="search" placeholder="  Discover" aria-label="Search">
+    <a href="/Logout">Logout</a>
+  </section>
+  </form>
+</nav>
+
 <div class="group-fondo">
   <h1>Group event</h1>
   <div class="feedback">
   {{#each message}}
-  <p><span class="badge badge-light">{{this.users}}</span> wrote: {{this.messages}}</p> 
-  {{!-- <h5>Subject:</h5>  {{this.subject}} --}}
+  <p><span class="badge badge-info">{{this.users}}  wrote:</span> {{this.messages}}</p> 
   {{/each}}
   </div>
   <div class="text-message" style="display: flex;">
-    <textarea name="messages" style="width:100%;" placeholder="Write message..."></textarea>
-    <button class="button is-success btn btn-info">
-        Post
-    </button>
-  </div>
-</div>
-
-
-{{!-- {{#each userGroup}}
-
-{{this.user.name}}
-
-{{/each}}
-
-
-
-<div class="grupo">
-<form action="/group" method="POST">
-  <label for="messages" class="for">What do you want to talk about?</label>
-  
-
-    <p class="control">
-      
-    </p>
+  <form action="/group/{{this.eventsId}}" method="POST" style="display: flex;">
+    <textarea name="messages" style="width:80vw; flex-grow:2;" placeholder="Write message..."></textarea>
+    <input type="submit" class="button is-success btn btn-info" value="POST" style="flex-grow:1; width:20vw;">
   </div>
 </form>
-</div> --}}
+</div>

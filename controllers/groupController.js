@@ -11,7 +11,7 @@ exports.groupView = async (req, res, next) => {
 
   if(userGroup.length > 0 && eventGroup){
 
-   return res.render('group/group', { message, userGroup, eventGroup })
+   return res.render('group/group', { message, userGroup, eventGroup, eventsId })
     
   }
  res.render('group/error')
@@ -26,7 +26,7 @@ exports.groupView = async (req, res, next) => {
   await Group.findByIdAndUpdate(group, { $push: { "userid": user._id } } )
   res.render('/group/:messageid', group)
 
-  res.redirect('/events')
+  res.redirect('/group/' + req.params.eventsId)
   
 }
 

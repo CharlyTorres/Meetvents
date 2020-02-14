@@ -1,9 +1,12 @@
 <nav class="navbar navbar-light fixed-top">
     <form class="form-inline">
+  
   <h5>meetvents</h5>
-  <section class="searchlog">
+  <section class="searchlog" style="margin:auto">
+    <a href="/events"><i class="fas fa-home"></i></a>
+    <a href="/profile" class="mr-3">Profile</a>
     <input class="form-control mr-sm-6" type="search" placeholder="  Discover" aria-label="Search">
-    <a href="/events">Back</a>
+    <a href="/Logout">Logout</a>
   </section>
   </form>
 </nav>
@@ -23,7 +26,6 @@
      <span>
           <form action="/addevents/{{this.id}}" method="POST">
             <input type="submit" value="I WANT TO GO" name="addevent">
-            {{!-- <a href="/assistants/{{this.id}}" class="href">SEARCH PEOPLE</a> --}}
           </form> 
         </span>
 

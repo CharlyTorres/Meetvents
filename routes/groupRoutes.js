@@ -11,7 +11,7 @@ const {
 
 
 router.get('/group/:eventsId', groupView)
-router.post('/group', groupPost)
+router.post('/group/:eventsId', groupPost)
 
 
 
