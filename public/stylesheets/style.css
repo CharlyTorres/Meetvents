@@ -448,4 +448,12 @@ nav {
     margin: auto;
     padding: 2% 0; }
 
+.navbar {
+  height: 65px;
+  background-color: purple; }
+
+.spacer {
+  height: 70px;
+  width: 100vw; }
+
 /*# sourceMappingURL=style.css.map */
